@@ -30,7 +30,40 @@ void reverseLinkedList(Node* head){
         }
     }
 }
+Node* aggregateEvenOdd(Node* head) {
+    if (!head || !head->next) return head;
 
+    Node *even = nullptr, *evenTail = nullptr;
+    Node *odd = nullptr, *oddTail = nullptr;
+    Node *curr = head;
+
+    while (curr) {
+        Node *next = curr->next;
+        curr->next = nullptr;
+
+        if (curr->data % 2 == 0) {
+            if (!even) even = evenTail = curr;
+            else evenTail = evenTail->next = curr;
+        } else {
+            if (!odd) odd = oddTail = curr;
+            else oddTail = oddTail->next = curr;
+        }
+        curr = next;
+    }
+
+    if (evenTail) evenTail->next = odd;
+    Node* temp1=even ? even : odd;
+    printList(temp1);
+    return temp1;
+}
+void printList(Node* head) {
+    Node* current = head;
+    while (current) {
+        std::cout << current->data << " -> ";
+        current = current->next;
+    }
+    std::cout << "nullptr" << std::endl;
+}
     int main()
 {
     Node *head = NULL;
@@ -75,5 +108,8 @@ void reverseLinkedList(Node* head){
     }
     cout << endl;
     reverseLinkedList(head);
+    cout<<"\nAggreagted list :";
+    aggregateEvenOdd(head);
+    
     return 0;
 }
