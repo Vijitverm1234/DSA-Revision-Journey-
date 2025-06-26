@@ -17,7 +17,37 @@ int getlen(Node* head){
    return count;
 }
 
-
+void insertElement(Node* head){
+   int x;
+   cout<<"\n Enter the element to be inserted : ";
+   cin>>x; 
+   int y;
+   cout<<"\n Enter the position : ";
+   cin>>y;
+   Node* newNode=new Node();
+   newNode->data=x;
+   newNode->next=NULL;
+   int length=getlen(head);
+   if(y>length){
+    cout<<"\n not possible insertion";
+   } 
+   else{
+    Node* temp=head;
+    int count=1;
+    while(count<=y-1){
+        temp=temp->next;
+        count+=1;
+    }
+    newNode->next=temp->next;
+    temp->next=newNode;
+      Node *temp2 = head;
+    while (temp2 != NULL)
+    {
+        cout << temp2->data << " ";
+        temp2 = temp2->next;
+    }
+   }
+}
 
     int main()
 {
@@ -64,5 +94,6 @@ int getlen(Node* head){
     cout << endl;
      int count=getlen(head);
      cout<<"\n length of Linked list"<<count;
+     insertElement(head);
     return 0;
 }
