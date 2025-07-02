@@ -2,7 +2,7 @@
 #include<stack>
 using namespace std;
 void insertStack(stack<int>&st,int x){
-    if(st.empty() || x>=st.top()){
+    if(st.empty() || x>=st.top()){ // remove the st.top condtion for only reversing the stack
         st.push(x);
         return;
     }
