@@ -1,6 +1,6 @@
 # Data Structures and Algorithms (DSA) Guide in C++
 
-This repository provides a comprehensive guide to essential Data Structures and Algorithms (DSA) concepts in C++, including tricks, time/space complexities, methods, and approaches. It is designed for quick reference and practical application in coding interviews and competitive programming.
+This repository provides a comprehensive guide to essential Data Structures and Algorithms (DSA) concepts in C++, including tricks, time/space complexities, methods, and approaches. It is designed for quick reference and practical application in coding interviews and competitive programming .
 
 
 
