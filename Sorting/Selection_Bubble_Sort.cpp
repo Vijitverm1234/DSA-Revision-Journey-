@@ -31,6 +31,6 @@ class Sort{
 int main(){
    Sort s;
    vector<int>arr={23,12,1,45,64};
-   s.BubbleSort(arr,5);
+//    s.BubbleSort(arr,5);
    
 }
