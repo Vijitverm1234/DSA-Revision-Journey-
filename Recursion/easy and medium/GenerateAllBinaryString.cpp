@@ -18,9 +18,7 @@ class Solution{
 };
 int main(){
     Solution s1;
-    int n;
-    cout<<"\n enter size : ";
-    cin>>n;
+    int  n=5;
     vector<string> res;
     s1.solve(n,res,"");
     for(auto it : res){
