@@ -11,9 +11,26 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
 Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 */
+#include<iostream>
+#include<vector>
+#include<climits>
+using namespace std;
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        
+        int n=prices.size();
+        int mini=prices[0];
+        int res=0;
+        for(int i=0;i<n;i++){
+            mini=min(mini,prices[i]);
+            res=max(res,prices[i]-mini);
+        }
+        return res;
     }
 };
+int main(){
+    Solution s;
+    vector<int> arr={7,6,4,3,1};
+     int res= s.maxProfit(arr);
+     cout<<res;
+}
