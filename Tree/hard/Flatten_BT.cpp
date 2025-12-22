@@ -12,6 +12,6 @@ class Solution {
         flatten(node->left);
         node->right=prev;
         node->left=NULL;
-        prev=node;
+        prev=node; 
     }
 };
